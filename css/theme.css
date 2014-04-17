@@ -1,22 +1,28 @@
-body{
 
-	overflow-x:hidden;
-
-}
 
 .theme_bg{
 
-	background:url(../images/theme_background.jpg) center top;
+	background-image:url(../images/main_bg.jpg);
+
+	background-position:center bottom;
+
+	background-repeat:no-repeat;
+
+	min-width:320px;
+
+	background-color:#fff;
+
+	background-size: auto 100%;
 
 }
 
 .logo{
 
-	padding-top:28%;
-
 	transition:all ease .3s;
 
 	margin: 0 auto;
+
+	padding-top: 28%;
 
 }
 
@@ -44,11 +50,7 @@ body{
 
 	display:table-cell;
 
-	background-image:url('../images/icon_bg.png');
-
-	background-repeat:no-repeat;
-
-	background-size:100% 100%;
+	/*background:url(../images/icon_bg.png) no-repeat;*/
 
 	vertical-align:middle;
 
@@ -58,11 +60,17 @@ body{
 
 .ui-header{
 
-	background:url(../images/header_bg.png) !important;
+	background:#dce1e5 !important;
 
 	border:none !important;
 
-	
+	background-size:auto 100% !important;
+
+}
+
+.ui-header a{
+
+	box-shadow:none;
 
 }
 
@@ -70,13 +78,15 @@ body{
 
 	text-shadow:none !important;
 
-	color:#fff !important;
+	color:#0A2654 !important;
 
-	font-size:24px;
+	font-family:Arial, Helvetica, sans-serif;
 
-	font-weight:normal;
+	font-weight:bold;
 
-	margin:0 2%;
+	font-size:26px;
+
+	margin:0 23%;
 
 }
 
@@ -126,31 +136,15 @@ body{
 
 
 
-.app_feature_list a{
+/* custom setting of icons */
 
-	color:#fff !important;
-
-	text-decoration:none;
-
-	cursor:pointer !important;
-
-}
-
-.app_feature_list a label{
-
-	cursor:pointer !important;
-
-}
-
-.app_feature_list a.item  img{
+.app_feature_list a img{
 
 	max-height:32px;
 
 	max-width:32px;
 
 }
-
-/* EDIT BY AMITOJ 18-Feb */
 
 
 
@@ -162,8 +156,6 @@ body{
 	background-size:cover;	
 }
 }
-
-
 
 
 

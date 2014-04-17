@@ -38,36 +38,6 @@
 
 <script>
 
-jQuery( document ).bind( "mobileinit", function() {
-
-    // Make your jQuery Mobile framework configuration changes here!
-
-
-
-    jQuery.mobile.allowCrossDomainPages = true;
-
-
-
-});
-
-
-
-$(document).ajaxStart(function() {
-
-    $.mobile.loading('show');
-
-});
-
-
-
-$(document).ajaxStop(function() {
-
-    $.mobile.loading('hide');
-
-});
-
-
-
 jQuery(document).ready(function(){
 
 	
@@ -88,23 +58,15 @@ jQuery(document).ready(function(){
 
 	        type: 'POST',
 
-	       	url: actionUrl.action,
-
-	       	//crossDomain:true,
-
-	      	dataType:'application/json; charset=utf-8',
+	       url: actionUrl.action,
 
 	        data: postData,
 
 	        success: function(response){
 
-					
+				//alert('eee');
 
-	        	var argtt = response.responseText;
-
-				var arg = JSON.parse(response.responseText);
-
-
+				var arg = JSON.parse(response);
 
 				if(arg.success==1)
 
@@ -130,39 +92,11 @@ jQuery(document).ready(function(){
 
 	        },
 
-	        error: function(response){
+	        error: function(){
 
-				
+	            alert('error');
 
-	        	var argtt = response.responseText;
-
-				var arg = JSON.parse(response.responseText);
-
-
-
-				if(arg.success==1)
-
-				{
-
-					$('.squeeze_wrapper').html("");
-
-					$('.squeeze_wrapper').html("<div class='no_data'>Submit Successfully</div>");
-
-				}
-
-				else
-
-				{
-
-					$('.squeeze_wrapper').html("");
-
-					$('.squeeze_wrapper').html("<div class='no_data'>Error ! Please try after sometime</div>");
-
-				}
-
-	        	//popdetialHideOther(arg);
-
-	        },
+	        }
 
 	    }); 
 
@@ -232,14 +166,6 @@ aedqed
 
 	    <input name="list_id" type="hidden"  value="3316206" />
 
-	    <input name="app_id" type="hidden" value="620" />
-
-	    <input name="user_id" type="hidden"  value="36" />
-
-	    <input name="module_id" type="hidden" value="3694" />
-
-	    <input name="module_name" type="hidden"  value="Squeeze" />
-
 	    <input name="name" type="text" placeholder="Name" />
 
 	    <input name="email" type="text" placeholder="Email" />
@@ -250,7 +176,7 @@ aedqed
 
     </div>
 
- <div id="testing" class="testing" ></div>
+ 
 
   <!-- Squeeze Page Ends here -->
 
